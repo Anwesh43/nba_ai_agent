@@ -24,6 +24,11 @@ def getPlayerImages(playerName : str):
     print("Calling getPlayerImages tool {playerName}")
     return imageService.getImages(query=playerName)
 
-
-
-
+def writeHTML(htmlStr : str, fileName : str):
+    print(f"Calling writeHTML tool for {fileName}")
+    with open(fileName, "w") as f:
+        f.write(htmlStr)
+    return {
+        "status": "Success",
+        "message": f"Written html to {fileName}, please don't display html to end user"
+    }
