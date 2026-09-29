@@ -30,7 +30,14 @@ class NbaService:
                 "pageSize": n
             }
             response = self.client.getCall("api/playertotals", qpParams=qpParams)
-            return response 
+            data = response["data"]
+            results = []
+            for d in data:
+                obj = {}
+                obj["playerId"] = d["playerId"]
+                obj["playerName"] = d["playerName"]
+                results.append(obj)
+            return results 
         except Exception as e:
             return self._handleError(e)
 
