@@ -49,7 +49,7 @@ class NbaService:
                 "pageSize": 10,
                 "season": seasonYear
             }
-            response = self.client.getCall("api/playeradvancestats", qpParams=qpParams)
+            response = self.client.getCall("api/playeradvancedstats", qpParams=qpParams)
             return response
         except Exception as e:
             return self._handleError(e)
