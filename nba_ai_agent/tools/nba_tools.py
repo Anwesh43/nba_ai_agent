@@ -1,6 +1,8 @@
 from services.nba_service import NbaService
+from services.image_service import ImageService 
 
 nbs = NbaService()
+imageService = ImageService()
 
 def getUpcomingGames():
     print(f"Calling getUpComningGames tool")
@@ -17,6 +19,11 @@ def getPlayerAdvanceStats(playerId : int, seasonYear : int):
 def getPlayerShotStats(playerId : int, seasonYear : int):
     print(f"Calling getPlayerShotStats {playerId} in {seasonYear}")
     return nbs.getPlayerShotStats(playerId=playerId, seasonYear=seasonYear)
+
+def getPlayerImages(playerName : str):
+    print("Calling getPlayerImages tool {playerName}")
+    return imageService.getImages(query=playerName)
+
 
 
 
