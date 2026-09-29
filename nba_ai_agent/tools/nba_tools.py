@@ -12,16 +12,16 @@ def getTopNPlayersInASeason(seasonYear : int, n : int):
     print(f"Calling getTopNPlayersInASeason in {seasonYear} and top {n}")
     return nbs.getTopNPlayersInASeason(seasonYear=seasonYear, n = n)
 
-def getPlayerAdvanceStats(playerId : int, seasonYear : int):
+def getPlayerAdvanceStats(playerId : str, seasonYear : int):
     print(f"Calling getPlayerAdvancedStats in {seasonYear} for player {playerId}")
     return nbs.getPlayerAdvanceStats(playerId=playerId, seasonYear=seasonYear)
 
-def getPlayerShotStats(playerId : int, seasonYear : int):
+def getPlayerShotStats(playerId : str, seasonYear : int):
     print(f"Calling getPlayerShotStats {playerId} in {seasonYear}")
     return nbs.getPlayerShotStats(playerId=playerId, seasonYear=seasonYear)
 
 def getPlayerImages(playerName : str):
-    print("Calling getPlayerImages tool {playerName}")
+    print(f"Calling getPlayerImages tool {playerName}")
     return imageService.getImages(query=playerName)
 
 def writeHTML(htmlStr : str, fileName : str):

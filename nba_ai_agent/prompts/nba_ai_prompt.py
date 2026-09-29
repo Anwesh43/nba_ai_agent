@@ -5,4 +5,5 @@ at the end use getPlayerImages tool get images of players
 use writeHTML tool, to create beautiful html string and write in appropriate file name.
 writeHTML tool call at end is must.
 use slides for players, and use image we got from getPlayerImages tool in html
+when displaying images try to main original image resolution and that is mobile responsive
 """
